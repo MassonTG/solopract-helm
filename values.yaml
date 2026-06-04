@@ -1,0 +1,19 @@
+namespace: solopract-dev
+
+backend:
+  image: ghcr.io/massontg/solopract-backend:v1
+  replicas: 1
+  port: 5000
+
+frontend:
+  image: ghcr.io/massontg/solopract-frontend:v1
+  replicas: 1
+  port: 80
+  nodePort: 30080
+
+postgres:
+  image: postgres:16
+  port: 5432
+  db: shop
+  user: shop
+  password: shop123
