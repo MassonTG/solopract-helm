@@ -13,12 +13,14 @@ spec:
       labels:
         app: backend
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: backend
           image: {{ .Values.backend.image }}
           ports:
             - containerPort: {{ .Values.backend.port }}
-          env:                                            # env на рівні ports, не всередині
+          env:
             - name: DB_HOST
               value: "postgres"
             - name: DB_PORT
