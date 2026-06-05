@@ -1,12 +1,12 @@
 namespace: solopract-dev
 
 backend:
-  image: ghcr.io/massontg/solopract-backend:v1
+  image: ghcr.io/massontg/solopract-backend:20260605122312
   replicas: 2
   port: 5000
 
 frontend:
-  image: ghcr.io/massontg/solopract-frontend:v1
+  image: ghcr.io/massontg/solopract-frontend:20260605122312
   replicas: 2
   port: 80
   nodePort: 30080
